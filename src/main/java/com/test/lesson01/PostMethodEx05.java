@@ -14,7 +14,7 @@ public class PostMethodEx05 extends HttpServlet{
 		response.setContentType("text/html");
 		
 		
-
+		// 주석테스트
 	}
 	
 
