@@ -14,8 +14,7 @@ public class PostMethodEx05 extends HttpServlet{
 		response.setContentType("text/html");
 		
 		
-		
-		
+
 	}
 	
 
