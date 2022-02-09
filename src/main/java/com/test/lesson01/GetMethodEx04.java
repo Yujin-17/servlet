@@ -14,7 +14,7 @@ public class GetMethodEx04 extends HttpServlet {
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		response.setCharacterEncoding("utf-8");
-		response.setContentType("text/plain");
+		response.setContentType("text/html");
 		
 		String userId = request.getParameter("userId");
 		String name = request.getParameter("name");
@@ -23,11 +23,21 @@ public class GetMethodEx04 extends HttpServlet {
 		
 		// 출력
 		PrintWriter out = response.getWriter();
-		out.println("userId:" + userId);
-		out.println("name:" + name);
-		out.println("birth:" + birth);
-		out.println("email:" + email);
+//		out.println("userId:" + userId);
+//		out.println("name:" + name);
+//		out.println("birth:" + birth);
+//		out.println("email:" + email);
 		 
+		// 테이블로 출력
+		out.print("<html><head><title>회원 정보</title></head><body>");
+		out.print("<table border=1>");
+		out.print("<tr><th>아이디</th><td>" + userId + "</td></tr>");
+		out.print("<tr><th>이름</th><td>" + name + "</td></tr>");
+		out.print("<tr><th>생년월일</th><td>" + birth + "</td></tr>");
+		out.print("<tr><th>이메일주소</th><td>" + email + "</td></tr>");
+		out.print("</table>");
+		out.print("</body></html>");
+		
 	}
 
 }
