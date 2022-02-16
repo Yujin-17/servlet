@@ -9,5 +9,41 @@
 <body>
 	<!-- html의 주석: 소스보기에서 보인다. -->
 	<%-- jsp의 주석: 소스보기에서 보이지 않는다.  --%>
+	
+	
+<% 
+	// scriptlet - 메인메소드 같은 느낌
+	// 자바 문법 시작 --> 자바 주석
+	
+	int sum = 0;
+	for (int i = 1; i <= 10; i++){
+		sum+=i;
+	}
+%>
+
+	<strong>합계:</strong>
+	<input type="text" value="<%= sum %>">
+	<br>
+	
+<%!
+	// 선언문 - 클래스같은 느낌
+	
+	// 필드
+	private int num = 100; 
+
+	// 메소드
+	public String getHelloWorld(){
+		return "Hello world";
+	}
+%>
+
+<%= getHelloWorld() %>
+<br>
+
+<%= num + 200 %>
+
+
+
+
 </body>
 </html>
